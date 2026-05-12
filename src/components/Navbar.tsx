@@ -26,7 +26,7 @@ export default function Navbar() {
       if (u) {
         const q = query(collection(db, "bookings"), where("userId", "==", u.uid));
         onSnapshot(q, (snapshot) => {
-          const fetched = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+          const fetched: any[] = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
           fetched.sort((a: any, b: any) => (b.timestamp?.seconds || 0) - (a.timestamp?.seconds || 0));
           setMyBookings(fetched);
         });
