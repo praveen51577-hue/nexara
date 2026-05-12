@@ -31,7 +31,7 @@ export default function ExpertAuthPage() {
           createdAt: serverTimestamp()
         });
         router.push('/expert/dashboard');
-      } else if (snap.data().role === 'expert') {
+      } else if ((snap.data() as any).role === 'expert') {
         router.push('/expert/dashboard');
       } else {
         alert("Access denied. You are registered as a Client, not an Expert.");

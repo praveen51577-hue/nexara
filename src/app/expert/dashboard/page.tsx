@@ -20,7 +20,7 @@ export default function ExpertDashboard() {
       if (user) {
         const userRef = doc(db, "users", user.uid);
         const snap = await getDoc(userRef);
-        if (snap.exists() && snap.data().role === 'expert') {
+        if (snap.exists() && (snap.data() as any).role === 'expert') {
           setExpert(user);
           loadDashboardData();
         } else {
