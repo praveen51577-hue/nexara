@@ -36,7 +36,7 @@ export default function ClientDashboard() {
     
     onSnapshot(q, (snapshot) => {
       // Sort in memory because Firestore requires a composite index for where() + orderBy()
-      const fetchedBookings = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+      const fetchedBookings: any[] = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
       fetchedBookings.sort((a: any, b: any) => {
         const timeA = a.timestamp?.seconds || 0;
         const timeB = b.timestamp?.seconds || 0;

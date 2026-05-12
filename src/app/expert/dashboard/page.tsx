@@ -39,11 +39,11 @@ export default function ExpertDashboard() {
     // Fetch all bookings (queries)
     const qBookings = query(collection(db, "bookings"), orderBy("timestamp", "desc"));
     onSnapshot(qBookings, (snapshot) => {
-      const bookingsData = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+      const bookingsData: any[] = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
       setBookings(bookingsData);
       
       // Calculate stats based on real queries
-      const uniqueClients = new Set(bookingsData.map((b: any) => b.email || b.userId)).size;
+      const uniqueClients = new Set(bookingsData.map(b => b.email || b.userId)).size;
       
       setStats({
         totalClients: uniqueClients,
