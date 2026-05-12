@@ -13,7 +13,7 @@ export default function Home() {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+    transition: { duration: 0.8, ease: "easeOut" }
   };
 
   const staggerContainer = {
@@ -41,7 +41,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             <motion.div
               className="badge"
@@ -111,7 +111,7 @@ export default function Home() {
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h3 style={{ fontSize: '2rem', marginBottom: '3rem' }}>Foundational Values</h3>
               <div className="flex-col" style={{ gap: '2rem' }}>
