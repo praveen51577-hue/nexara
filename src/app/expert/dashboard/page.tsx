@@ -43,7 +43,7 @@ export default function ExpertDashboard() {
       setBookings(bookingsData);
       
       // Calculate stats based on real queries
-      const uniqueClients = new Set(bookingsData.map(b => b.email || b.userId)).size;
+      const uniqueClients = new Set(bookingsData.map((b: any) => b.email || b.userId)).size;
       
       setStats({
         totalClients: uniqueClients,
