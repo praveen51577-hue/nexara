@@ -26,7 +26,7 @@ export default function ExpertisePage() {
       
       <section className="section-pad" style={{ paddingTop: '12rem', paddingBottom: '4rem' }}>
         <div className="container text-center">
-          <motion.div {...fadeInUp}>
+          <motion.div {...(fadeInUp as any)}>
             <span className="text-small-caps">Domains</span>
             <h1 className="text-hero" style={{ marginBottom: '2rem' }}>
               Our <span className="text-gradient">Expertise</span>
@@ -42,7 +42,7 @@ export default function ExpertisePage() {
         <div className="container">
           <motion.div 
             className="grid-3"
-            variants={staggerContainer}
+            variants={staggerContainer as any}
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
@@ -55,7 +55,7 @@ export default function ExpertisePage() {
               { icon: <Briefcase size={24} />, title: 'Cloud Accounting', desc: 'Modern bookkeeping using Tally Prime & Zoho for real-time financial visibility.' },
               { icon: <Star size={24} />, title: 'FEMA & FDI', desc: 'Expert navigation of cross-border regulations and foreign exchange compliance.' },
             ].map((svc, i) => (
-              <motion.div key={i} className="premium-card" variants={fadeInUp}>
+              <motion.div key={i} className="premium-card" variants={fadeInUp as any}>
                 <div className="icon-box">
                   {svc.icon}
                 </div>
@@ -65,7 +65,7 @@ export default function ExpertisePage() {
             ))}
           </motion.div>
 
-          <motion.div className="text-center" style={{ marginTop: '5rem' }} {...fadeInUp}>
+          <motion.div className="text-center" style={{ marginTop: '5rem' }} {...(fadeInUp as any)}>
              <Link href="/auth?role=client" className="btn-primary">
                 Book a Consultation <ArrowRight size={18} />
               </Link>
@@ -75,7 +75,7 @@ export default function ExpertisePage() {
 
       <footer className="section-pad text-center" style={{ borderTop: '1px solid var(--border)', paddingBottom: '3rem', marginTop: '4rem' }}>
         <div className="container">
-          <motion.div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }} {...fadeInUp}>
+          <motion.div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }} {...(fadeInUp as any)}>
             <span style={{ color: 'var(--accent)' }}>Nexara</span> Consultants
           </motion.div>
           <p className="text-small-caps" style={{ color: 'var(--text-secondary)' }}>Your Growth, Our Commitment</p>

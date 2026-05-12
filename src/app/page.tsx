@@ -84,7 +84,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="section-pad" style={{ backgroundColor: 'var(--surface)' }}>
         <div className="container">
-          <motion.div className="grid-2" style={{ marginBottom: '5rem' }} {...fadeInUp}>
+          <motion.div className="grid-2" style={{ marginBottom: '5rem' }} {...(fadeInUp as any)}>
             <div>
               <span className="text-small-caps" style={{ fontSize: '1.15rem', letterSpacing: '0.2em' }}>Genesis</span>
               <h2 className="text-title">A New Standard in Financial Partnership</h2>
@@ -138,7 +138,7 @@ export default function Home() {
           {/* Executive Stats */}
           <motion.div
             className="grid-4"
-            variants={staggerContainer}
+            variants={staggerContainer as any}
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
@@ -149,7 +149,7 @@ export default function Home() {
               { value: 'Qualified', label: 'Consultants' },
               { value: 'Proactive', label: 'Compliance' },
             ].map((stat, i) => (
-              <motion.div key={i} className="premium-card text-center" style={{ padding: '2rem' }} variants={fadeInUp}>
+              <motion.div key={i} className="premium-card text-center" style={{ padding: '2rem' }} variants={fadeInUp as any}>
                 <div style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{stat.value}</div>
                 <div className="text-small-caps" style={{ margin: 0, color: 'var(--text-tertiary)' }}>{stat.label}</div>
               </motion.div>
@@ -161,14 +161,14 @@ export default function Home() {
       {/* Services Section */}
       <section id="services" className="section-pad">
         <div className="container">
-          <motion.div className="text-center" style={{ marginBottom: '4rem' }} {...fadeInUp}>
+          <motion.div className="text-center" style={{ marginBottom: '4rem' }} {...(fadeInUp as any)}>
             <span className="text-small-caps" style={{ fontSize: '1.15rem', letterSpacing: '0.2em' }}>Expertise</span>
             <h2 className="text-title">Full-Spectrum Advisory</h2>
           </motion.div>
 
           <motion.div
             className="grid-3"
-            variants={staggerContainer}
+            variants={staggerContainer as any}
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
@@ -181,7 +181,7 @@ export default function Home() {
               { icon: <Briefcase size={24} />, title: 'Cloud Accounting', desc: 'Modern bookkeeping using Tally Prime & Zoho for real-time financial visibility.', details: ['Daily Bookkeeping', 'Payroll Processing', 'Accounts Payable/Receivable', 'Cloud Migration'] },
               { icon: <Star size={24} />, title: 'FEMA & FDI', desc: 'Expert navigation of cross-border regulations and foreign exchange compliance.', details: ['FDI Structuring', 'RBI Compliances', 'Cross-Border Mergers', 'Overseas Direct Investment'] },
             ].map((svc, i) => (
-              <motion.div key={i} className="premium-card" variants={fadeInUp} style={{ display: 'flex', flexDirection: 'column' }}>
+              <motion.div key={i} className="premium-card" variants={fadeInUp as any} style={{ display: 'flex', flexDirection: 'column' }}>
                 <div className="icon-box">
                   {svc.icon}
                 </div>
@@ -214,14 +214,14 @@ export default function Home() {
       {/* Team Section */}
       <section id="team" className="section-pad" style={{ backgroundColor: 'var(--surface)' }}>
         <div className="container">
-          <motion.div className="text-center" style={{ marginBottom: '4rem' }} {...fadeInUp}>
+          <motion.div className="text-center" style={{ marginBottom: '4rem' }} {...(fadeInUp as any)}>
             <span className="text-small-caps" style={{ fontSize: '1.15rem', letterSpacing: '0.2em' }}>Partners</span>
             <h2 className="text-title">Executive Leadership</h2>
           </motion.div>
 
           <motion.div
             className="grid-3"
-            variants={staggerContainer}
+            variants={staggerContainer as any}
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
@@ -249,7 +249,7 @@ export default function Home() {
                 tags: ['CLOUD ACCT', 'ROC']
               },
             ].map((expert, i) => (
-              <motion.div key={i} className="premium-card text-center" style={{ alignItems: 'center' }} variants={fadeInUp}>
+              <motion.div key={i} className="premium-card text-center" style={{ alignItems: 'center' }} variants={fadeInUp as any}>
                 <div style={{ width: '80px', height: '80px', borderRadius: '50%', backgroundColor: 'var(--bg)', border: '1px solid var(--border-strong)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', fontWeight: '600', marginBottom: '1.5rem', color: 'var(--accent)' }}>
                   {expert.initials}
                 </div>
@@ -270,7 +270,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="section-pad">
         <div className="container grid-2">
-          <motion.div {...fadeInUp}>
+          <motion.div {...(fadeInUp as any)}>
             <span className="text-small-caps">Inquiry</span>
             <h2 className="text-title">Connect with our Team.</h2>
             <p className="text-subtitle" style={{ marginLeft: 0 }}>Let's discuss how our strategic financial solutions can drive your next phase of growth.</p>
@@ -321,7 +321,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="section-pad text-center" style={{ borderTop: '1px solid var(--border)', paddingBottom: '3rem' }}>
         <div className="container">
-          <motion.div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }} {...fadeInUp}>
+          <motion.div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }} {...(fadeInUp as any)}>
             <span style={{ color: 'var(--accent)' }}>Nexara</span> Consultants
           </motion.div>
           <p className="text-small-caps" style={{ color: 'var(--text-secondary)' }}>Your Growth, Our Commitment</p>
